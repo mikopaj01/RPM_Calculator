@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:name="@string/app_name"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/almostBlack"
+    tools:ignore="HardcodedText"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/workingsTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="bottom|right"
+            android:lines="2"
+            android:maxLines="2"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/stack"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/stack"
+            android:layout_width="219dp"
+            android:layout_height="168dp"
+            android:layout_marginStart="2dp"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="start"
+            android:lines="4"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="false"
+            android:text=""
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonOperator"
+            android:onClick="settingsAction"
+            android:id="@+id/settingsbutton"
+            android:text="⚙️"/>
+        <Button
+            style="@style/buttonNumber"
+            android:textColor="@color/blue"
+            android:onClick="allClearAction"
+            android:text="AC"/>
+        <Button
+            style="@style/buttonNumber"
+            android:textColor="@color/blue"
+            android:onClick="backSpaceAction"
+            android:text="⌫"/>
+        <Button
+            style="@style/buttonOperator"
+            android:text="/"/>
+
+        <Button
+            style="@style/buttonOperator"
+            android:text="@string/square_root_symbol"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="7"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="8"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="9" />
+        <Button
+            style="@style/buttonOperator"
+            android:text="x"/>
+        <Button
+            style="@style/buttonOperator"
+            android:text="y^a"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="4"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="5"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="6" />
+        <Button
+            style="@style/buttonOperator"
+            android:text="-"/>
+        <Button
+            style="@style/buttonOperator"
+            android:onClick="SwapAction"
+            android:text="Swap"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="1"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="2"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="3" />
+        <Button
+            style="@style/buttonOperator"
+            android:text="+"/>
+        <Button
+            style="@style/buttonOperator"
+            android:onClick="DropAction"
+            android:text="Drop"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="."/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="0"/>
+        <Button
+            style="@style/buttonOperator"
+            android:text="+/-"/>
+        <Button
+            style="@style/buttonNumber"
+            android:layout_weight="2"
+            android:background="@color/green"
+            android:textSize="40sp"
+            android:onClick="enterAction"
+            android:text="Enter" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

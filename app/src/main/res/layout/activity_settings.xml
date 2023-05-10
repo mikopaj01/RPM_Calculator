@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/almostBlack"
+    android:id="@+id/bg"
+    tools:context=".SettingsActivity">
+
+    <TextView
+        android:id="@+id/roundText"
+        android:layout_width="114dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="100dp"
+        android:text="Pick rounding"
+        app:layout_constraintEnd_toStartOf="@+id/roundPicker"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <NumberPicker
+        android:id="@+id/roundPicker"
+        android:layout_width="110dp"
+        android:layout_height="121dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/roundText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/setOperator"
+        android:layout_width="179dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="208dp"
+        android:onClick="setAction"
+        android:text="Set"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/colorText"
+        android:layout_width="177dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="400dp"
+        android:gravity="center"
+        android:text="Pick background color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
+        android:id="@+id/WhiteButton"
+        android:layout_width="179dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="32dp"
+        android:onClick="setBackgroundAction"
+        android:text="White"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/BlackButton"
+        app:layout_constraintTop_toBottomOf="@+id/colorText" />
+
+    <Button
+        android:id="@+id/BlackButton"
+        android:layout_width="179dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="32dp"
+        android:onClick="setBackgroundAction"
+        android:text="Black"
+        android:textColor="@color/white"
+        android:background="@color/almostBlack"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@+id/WhiteButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
